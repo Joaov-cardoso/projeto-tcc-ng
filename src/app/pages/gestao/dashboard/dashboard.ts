@@ -48,6 +48,20 @@ import { SplitterModule } from 'primeng/splitter';
         </ng-template>
       </p-splitter>
     </div> 
+
+    <div class="card3">
+        <p-splitter class="mb-8 dashboard-card3">
+            <ng-template #panel>
+                <div class="flex items-center justify-center h-full texto">Produtos em Destaque</div>
+            </ng-template>
+        </p-splitter>
+
+        <p-splitter class="mb-8 dashboard-card3">
+            <ng-template #panel>
+                <div class="flex items-center justify-center h-full texto">Ultimas Avaliações</div>
+            </ng-template>
+        </p-splitter>
+    </div>
 </div> 
  `,
   styles: `
@@ -62,7 +76,7 @@ import { SplitterModule } from 'primeng/splitter';
       display: flex;
       flex-direction: column;
       padding: 1rem;
-      margin-top: 30px;
+      margin-top: 20px;
       margin-right: 70px;
       box-shadow: 2px 0 5px rgba(0,0,0,0.2);
   }
@@ -86,6 +100,12 @@ import { SplitterModule } from 'primeng/splitter';
     gap: 20px;
   }
 
+  .card3 {
+    display:flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
   .dashboard-card1{
     height: 100px; 
     width: 100%;
@@ -93,12 +113,23 @@ import { SplitterModule } from 'primeng/splitter';
 
   .dashboard-card2{
     margin-top: 20px; 
-    height: 300px; 
+    height: 340px; 
     width: 100%;
+  }
+
+  .dashboard-card3 {
+    margin-top: 20px; 
+    height: 300px; 
+    width: 100%; 
   }
 
   .texto{
     text-align: center;
+  }
+
+  .card-inferior{
+    display: flex;
+    flex-direction: row;
   }
   `
 })
