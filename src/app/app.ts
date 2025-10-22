@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Sidebar } from './components/sidebar/sidebar';
+import { Sidebar } from './components/painel-gestao/sidebar/sidebar';
 
 @Component({
   selector: 'app-root',

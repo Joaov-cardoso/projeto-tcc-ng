@@ -1,24 +1,24 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { AvatarModule } from 'primeng/avatar';
 @Component({
   selector: 'app-sidebar',
-  imports: [AvatarModule,],
+  imports: [AvatarModule, RouterLink],
   template: `
     <div class="sidebar">
       <div class="sidebar-header">
         <p-avatar label="U" size="large"></p-avatar>
         <h3>Usuário</h3>
       </div>
-
       <ul class="sidebar-menu">
-        <li><a href="#">Dashboard</a></li>
-        <li><a href="#">Preços</a></li>
-        <li><a href="#">Produtos</a></li>
-        <li><a href="#">Fornecedores</a></li>
-        <li><a href="#">Estoque</a></li>
-        <li><a href="#">Fiscal</a></li>
-        <li><a href="#">Relatórios</a></li>
-        <li><a href="#">Custos Fixos</a></li>
+        <li><a routerLink="dashboard">Dashboard</a></li>
+        <li><a routerLink="precos">Preços</a></li>
+        <li><a routerLink="#">Produtos</a></li>
+        <li><a routerLink="#">Fornecedores</a></li>
+        <li><a routerLink="#">Estoque</a></li>
+        <li><a routerLink="#">Fiscal</a></li>
+        <li><a routerLink="#">Relatórios</a></li>
+        <li><a routerLink="#">Custos Fixos</a></li>
       </ul>
     </div>
   `,
