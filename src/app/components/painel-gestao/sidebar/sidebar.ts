@@ -13,12 +13,12 @@ import { AvatarModule } from 'primeng/avatar';
       <ul class="sidebar-menu">
         <li><a routerLink="dashboard">Dashboard</a></li>
         <li><a routerLink="precos">Preços</a></li>
-        <li><a routerLink="#">Produtos</a></li>
-        <li><a routerLink="#">Fornecedores</a></li>
-        <li><a routerLink="#">Estoque</a></li>
-        <li><a routerLink="#">Fiscal</a></li>
-        <li><a routerLink="#">Relatórios</a></li>
-        <li><a routerLink="#">Custos Fixos</a></li>
+        <li><a routerLink="produtos">Produtos</a></li>
+        <li><a routerLink="fornecedores">Fornecedores</a></li>
+        <li><a routerLink="estoque">Estoque</a></li>
+        <li><a routerLink="fiscal">Fiscal</a></li>
+        <li><a routerLink="relatorios">Relatórios</a></li>
+        <li><a routerLink="custoFixos">Custos Fixos</a></li>
       </ul>
     </div>
   `,
