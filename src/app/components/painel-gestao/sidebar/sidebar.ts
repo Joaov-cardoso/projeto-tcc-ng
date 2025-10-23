@@ -18,7 +18,7 @@ import { AvatarModule } from 'primeng/avatar';
         <li><a routerLink="estoque">Estoque</a></li>
         <li><a routerLink="fiscal">Fiscal</a></li>
         <li><a routerLink="relatorios">Relatórios</a></li>
-        <li><a routerLink="custoFixos">Custos Fixos</a></li>
+        <li><a routerLink="custos-fixos">Custos Fixos</a></li>
       </ul>
     </div>
   `,
