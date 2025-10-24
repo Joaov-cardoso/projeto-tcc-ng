@@ -25,6 +25,6 @@ import { SplitterModule } from 'primeng/splitter';
   }
   `
 })
-export class GestaoCustoFixo {
+export class GestaoCustosFixos {
 
 }
