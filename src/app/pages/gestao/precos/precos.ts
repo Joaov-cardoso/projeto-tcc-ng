@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { TableModule } from 'primeng/table';
 import { CustomerService } from '../../../services/customer-service';
+import { ButtonModule } from 'primeng/button';
 
 interface Customer{
 
@@ -9,11 +10,10 @@ interface Customer{
 
 @Component({
   selector: 'app-precos',
-  imports: [TableModule, CommonModule],
+  imports: [TableModule, CommonModule, ButtonModule],
   template: `
 <div class="painel">
   <h2>Central de Preços</h2>
-
   <div class="card">
     <p-table
         [value]="customers"
@@ -24,10 +24,11 @@ interface Customer{
     >
         <ng-template #header>
             <tr>
-                <th style="width:25%">Name</th>
-                <th style="width:25%">Country</th>
-                <th style="width:25%">Company</th>
-                <th style="width:25%">Representative</th>
+                <th style="width:25%">Produto</th>
+                <th style="width:25%">Custo</th>
+                <th style="width:25%">Valor Sugerido</th>
+                <th style="width:25%">Valor Regional</th>
+                <th style="width:25%"></th>
             </tr>
         </ng-template>
         <ng-template #body let-customer>
@@ -56,7 +57,7 @@ interface Customer{
       display: flex;
       flex-direction: column;
       padding: 1rem;
-      margin-top: 30px;
+      margin-top: 20px;
       margin-right: 70px;
       box-shadow: 2px 0 5px rgba(0,0,0,0.2);
   }
