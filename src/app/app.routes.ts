@@ -7,7 +7,11 @@ import { GestaoFornecedores } from './pages/gestao/fornecedores/fornecedores';
 import { GestaoEstoque } from './pages/gestao/estoque/estoque';
 import { GestaoFiscal } from './pages/gestao/fiscal/fiscal';
 import { GestaoRelatorios } from './pages/gestao/relatorios/relatorios';
+<<<<<<< HEAD
 import { EstoqueCreate } from './pages/gestao/estoque/create';
+=======
+import { GestaoCustosFixos } from './pages/gestao/custos-fixos/custos-fixo';
+>>>>>>> 4f9e7d90ac8794e2ce5287766428efa64284ceca
 
 export const routes: Routes = [
     {path: "login", component: InitialLogin},
@@ -21,5 +25,6 @@ export const routes: Routes = [
 
     {path: "fiscal", component: GestaoFiscal},
     {path: "relatorios", component: GestaoRelatorios},
+    {path: "custos-fixos", component: GestaoCustosFixos},
     
 ];
