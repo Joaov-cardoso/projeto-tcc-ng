@@ -5,7 +5,22 @@ import { CustomerService } from '../../../services/customer-service';
 import { ButtonModule } from 'primeng/button';
 
 interface Customer{
-
+    id: 1000,
+    name: 'James Butt',
+    country: {
+        name: 'Algeria',
+        code: 'dz'
+    },
+    company: 'Benton, John B Jr',
+    date: '2015-09-13',
+    status: 'unqualified',
+    verified: true,
+    activity: 17,
+    representative: {
+        name: 'Ioni Bowcher',
+        image: 'ionibowcher.png'
+    },
+    balance: 70663
 }
 
 @Component({
@@ -15,34 +30,32 @@ interface Customer{
 <div class="painel">
   <h2>Central de Preços</h2>
   <div class="card">
-    <p-table
-        [value]="customers"
-        [paginator]="true"
-        [rows]="5"
-        [tableStyle]="{ 'min-width': '50rem' }"
-        [rowsPerPageOptions]="[5, 10, 20]"
-    >
-        <ng-template #header>
-            <tr>
-                <th style="width:25%">Produto</th>
-                <th style="width:25%">Custo</th>
-                <th style="width:25%">Valor Sugerido</th>
-                <th style="width:25%">Valor Regional</th>
-                <th style="width:25%"></th>
-            </tr>
-        </ng-template>
-        <ng-template #body let-customer>
-            <tr>
-                <td>{{ customer.name }}</td>
-                <td>{{ customer.country.name }}</td>
-                <td>{{ customer.company }}</td>
-                <td>{{ customer.representative.name }}</td>
-            </tr>
-        </ng-template>
-    </p-table>
-</div>
-
-
+      <p-table
+          [value]="customers"
+          [paginator]="true"
+          [rows]="5"
+          [tableStyle]="{ 'min-width': '50rem' }"
+          [rowsPerPageOptions]="[5, 10, 20]"
+      >
+          <ng-template #header>
+              <tr>
+                  <th style="width:25%">Produto</th>
+                  <th style="width:25%">Custo</th>
+                  <th style="width:25%">Valor Sugerido</th>
+                  <th style="width:25%">Valor Regional</th>
+                  <th style="width:25%"></th>
+              </tr>
+          </ng-template>
+          <ng-template #body let-customer>
+              <tr>
+                  <td>{{ customer.name }}</td>
+                  <td>{{ customer.country.name }}</td>
+                  <td>{{ customer.company }}</td>
+                  <td>{{ customer.representative.name }}</td>
+              </tr>
+          </ng-template>
+      </p-table>
+  </div>
 </div>
   `,
   styles: `
@@ -74,4 +87,5 @@ export class GestaoPrecos {
 customers!: Customer[];
 
     constructor(private customerService: CustomerService) {}
+    
 }
